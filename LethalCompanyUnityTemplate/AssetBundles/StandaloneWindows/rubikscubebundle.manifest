@@ -1,0 +1,50 @@
+ManifestFileVersion: 0
+UnityVersion: 2023.2.22f1
+CRC: 1963832081
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 823c882faac9839f05a63ba874c60221
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 8bf51b1296fbbe911d04f8148486bf8c
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 3e2d65ccdb07e4d492afc76a97873bfd
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: c30496d6ae6d6f907456e10a94e01ec6, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/RubiksCube/Rubik's Cube.asset
+- Assets/RubiksCube/yellow.mat
+- Assets/RubiksCube/blue.mat
+- Assets/RubiksCube/white.mat
+- Assets/RubiksCube/green.mat
+- Assets/RubiksCube/RubiksCubeModel.prefab
+- Assets/RubiksCube/orange.mat
+- Assets/RubiksCube/red.mat
+Dependencies: []
