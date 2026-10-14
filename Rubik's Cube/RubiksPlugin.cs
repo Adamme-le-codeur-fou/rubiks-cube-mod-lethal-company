@@ -3,9 +3,12 @@ using BepInEx.Logging;
 using HarmonyLib;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 
 namespace Rubik_s_Cube
 {
@@ -20,12 +23,26 @@ namespace Rubik_s_Cube
 
         internal ManualLogSource mls;
 
+        public static AssetBundle MyCustomAssets;
+
         void Awake()
         {
             mls = BepInEx.Logging.Logger.CreateLogSource(modGUID);
             mls.LogInfo("RUBIK'S CUBE MOD BY POUTRE56");
 
-            harmony.PatchAll(typeof(RubiksPlugin));
+            string sAssemblyLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            MyCustomAssets = AssetBundle.LoadFromFile(Path.Combine(sAssemblyLocation, "rubikscubebundle"));
+            if (MyCustomAssets == null)
+            {
+                mls.LogError("POUTRE56 <><><><><><><><><><><><> Failed to load rubiks bundle.");
+                return;
+            }
+            else
+            {
+                mls.LogError("POUTRE56 <><><><><><><><><><><><> Rubiks bundle loaded successfully");
+            }
+
+             harmony.PatchAll(typeof(RubiksPlugin));
         }
     }
 }
