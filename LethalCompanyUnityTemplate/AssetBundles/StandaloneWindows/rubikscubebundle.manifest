@@ -1,16 +1,16 @@
 ManifestFileVersion: 0
 UnityVersion: 2023.2.22f1
-CRC: 1963832081
+CRC: 2850107489
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 823c882faac9839f05a63ba874c60221
+    Hash: d193c36e5736c908b127272770b8b490
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 8bf51b1296fbbe911d04f8148486bf8c
+    Hash: 3df464ac6b7f1a9673a3af3529490bbf
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: 3e2d65ccdb07e4d492afc76a97873bfd
+    Hash: dbc9fdae3839cd936a93d526d9a717f8
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -31,20 +31,37 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 65
   Script: {instanceID: 0}
+- Class: 82
+  Script: {instanceID: 0}
 - Class: 114
   Script: {fileID: 11500000, guid: c30496d6ae6d6f907456e10a94e01ec6, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 3d0cf24d2ccc3b7eab72048d0f57c437, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 3c36d0a92cbb1f26a39169ef0eae393a, type: 3}
 - Class: 115
   Script: {instanceID: 0}
 - Class: 213
   Script: {instanceID: 0}
-SerializeReferenceClassIdentifiers: []
+- Class: 241
+  Script: {instanceID: 0}
+- Class: 243
+  Script: {instanceID: 0}
+- Class: 245
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers:
+- AssemblyName: Assembly-CSharp
+  ClassName: .Battery
 Assets:
 - Assets/RubiksCube/Rubik's Cube.asset
 - Assets/RubiksCube/yellow.mat
 - Assets/RubiksCube/blue.mat
+- Assets/RubiksCube/rubiks_cube_icone.jpg
 - Assets/RubiksCube/white.mat
 - Assets/RubiksCube/green.mat
-- Assets/RubiksCube/RubiksCubeModel.prefab
+- Assets/RubiksCube/RubiksCube.prefab
 - Assets/RubiksCube/orange.mat
 - Assets/RubiksCube/red.mat
 Dependencies: []
