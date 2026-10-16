@@ -1,16 +1,16 @@
 ManifestFileVersion: 0
 UnityVersion: 2023.2.22f1
-CRC: 2850107489
+CRC: 3916078317
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: d193c36e5736c908b127272770b8b490
+    Hash: 445a0c0cb1f514973119722ecaa818ae
   TypeTreeHash:
     serializedVersion: 2
     Hash: 3df464ac6b7f1a9673a3af3529490bbf
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: dbc9fdae3839cd936a93d526d9a717f8
+    Hash: 0be4d4440125c2690cd5404f16828490
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -56,12 +56,8 @@ SerializeReferenceClassIdentifiers:
   ClassName: .Battery
 Assets:
 - Assets/RubiksCube/Rubik's Cube.asset
-- Assets/RubiksCube/yellow.mat
-- Assets/RubiksCube/blue.mat
-- Assets/RubiksCube/rubiks_cube_icone.jpg
-- Assets/RubiksCube/white.mat
-- Assets/RubiksCube/green.mat
+- Assets/RubiksCube/item_icon.png
+- Assets/RubiksCube/rubiks_cube_41_90_diffuse.jpg
 - Assets/RubiksCube/RubiksCube.prefab
-- Assets/RubiksCube/orange.mat
-- Assets/RubiksCube/red.mat
+- Assets/RubiksCube/rubiks_cube_mat.mat
 Dependencies: []

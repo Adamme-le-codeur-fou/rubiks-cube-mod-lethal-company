@@ -13,28 +13,28 @@ MonoBehaviour:
   m_Name: Rubik's Cube
   m_EditorClassIdentifier: 
   itemId: 0
-  itemName: Rubik's Cube
+  itemName: Solvable Toy Cube
   spawnPositionTypes: []
   twoHanded: 0
   twoHandedAnimation: 0
-  canBeGrabbedBeforeGameStart: 0
-  weight: 0
+  canBeGrabbedBeforeGameStart: 1
+  weight: 1
   itemIsTrigger: 0
   holdButtonUse: 0
-  itemSpawnsOnGround: 0
+  itemSpawnsOnGround: 1
   isConductiveMetal: 1
   isScrap: 1
-  creditsWorth: 67
+  creditsWorth: 0
   lockedInDemo: 0
-  highestSalePercentage: 0
-  maxValue: 67
-  minValue: 67
+  highestSalePercentage: 80
+  maxValue: 250
+  minValue: 150
   spawnPrefab: {fileID: 1220812413243502300, guid: 292e341304ff0c049bd54b661abe5a46,
     type: 3}
   requiresBattery: 0
   batteryUsage: 0
   automaticallySetUsingPower: 0
-  itemIcon: {fileID: 21300000, guid: 808f2684bc4ec9146ba1a672227c933f, type: 3}
+  itemIcon: {fileID: 21300000, guid: 9cb4280d41e6efc42ba07bad785cc3db, type: 3}
   grabAnim: 
   useAnim: 
   pocketAnim: 
@@ -50,13 +50,14 @@ MonoBehaviour:
   syncInteractLRFunction: 0
   saveItemVariable: 0
   isDefensiveWeapon: 0
-  toolTips: []
-  verticalOffset: 0
+  toolTips:
+  - Hold [Left MB] to rotate
+  verticalOffset: 0.15
   floorYOffset: 0
   allowDroppingAheadOfPlayer: 0
   restingRotation: {x: 0, y: 0, z: 0}
   rotationOffset: {x: 0, y: 0, z: 0}
-  positionOffset: {x: 0, y: 0, z: 0}
+  positionOffset: {x: 0.15, y: 0.15, z: -0.15}
   meshOffset: 0
   meshVariants: []
   materialVariants: []
