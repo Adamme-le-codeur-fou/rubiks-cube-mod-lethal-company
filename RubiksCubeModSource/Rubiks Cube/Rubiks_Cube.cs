@@ -6,9 +6,11 @@ using LobbyCompatibility.Enums;
 using System.IO;
 using System.Reflection;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace Rubiks_Cube
 {
+
     [BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
     [BepInDependency(LethalLib.Plugin.ModGUID)]
     public class Rubiks_Cube : BaseUnityPlugin
@@ -24,7 +26,7 @@ namespace Rubiks_Cube
 
             Patch();
 
-            Logger.LogInfo($"{MyPluginInfo.PLUGIN_GUID} v{MyPluginInfo.PLUGIN_VERSION} has loaded!");
+            //Logger.LogInfo($"{MyPluginInfo.PLUGIN_GUID} v{MyPluginInfo.PLUGIN_VERSION} has loaded!");
         }
 
         internal static void Patch()
@@ -37,9 +39,9 @@ namespace Rubiks_Cube
 
             string sAssemblyLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 
-            AssetBundle MyAssetBundle = AssetBundle.LoadFromFile(Path.Combine(sAssemblyLocation, "rubikscubebundle"));
+            AssetBundle RubiksBundle = AssetBundle.LoadFromFile(Path.Combine(sAssemblyLocation, "rubikscubebundle"));
 
-            if (MyAssetBundle == null)
+            if (RubiksBundle == null)
             {
                 Logger.LogDebug("FAILED TO LOAD RUBIKS CUBE BUNDLE");
                 return;
@@ -49,10 +51,16 @@ namespace Rubiks_Cube
                 Logger.LogDebug("RUBIKS CUBE BUNDLE LOADED SUCCEFULLY");
             }
 
+            Item RubiksItem = RubiksBundle.LoadAsset<Item>("Assets/RubiksCube/Rubik's Cube.asset");
+            RotatingScrap rotatingScrap = RubiksItem.spawnPrefab.AddComponent<RotatingScrap>();
+            rotatingScrap.itemProperties = RubiksItem;
+            rotatingScrap.grabbable = true;
+            rotatingScrap.isInFactory = true;
+            rotatingScrap.grabbableToEnemies = true;
+
             int iRarity = 30;
-            Item MyCustomItem = MyAssetBundle.LoadAsset<Item>("Assets/RubiksCube/Rubik's Cube.asset");
-            LethalLib.Modules.NetworkPrefabs.RegisterNetworkPrefab(MyCustomItem.spawnPrefab);
-            LethalLib.Modules.Items.RegisterScrap(MyCustomItem, iRarity, LethalLib.Modules.Levels.LevelTypes.All);
+            LethalLib.Modules.NetworkPrefabs.RegisterNetworkPrefab(RubiksItem.spawnPrefab);
+            LethalLib.Modules.Items.RegisterScrap(RubiksItem, iRarity, LethalLib.Modules.Levels.LevelTypes.All);
 
 
 
@@ -61,13 +69,13 @@ namespace Rubiks_Cube
             Logger.LogDebug("Finished patching!");
         }
 
-        internal static void Unpatch()
-        {
-            Logger.LogDebug("Unpatching...");
+        //internal static void Unpatch()
+        //{
+        //    Logger.LogDebug("Unpatching...");
 
-            Harmony?.UnpatchSelf();
+        //    Harmony?.UnpatchSelf();
 
-            Logger.LogDebug("Finished unpatching!");
-        }
+        //    Logger.LogDebug("Finished unpatching!");
+        //}
     }
 }
